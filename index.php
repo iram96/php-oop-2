@@ -2,28 +2,28 @@
 
 include_once __DIR__ . '/Product.php';
 include_once __DIR__ . '/Toy.php';
+include_once __DIR__ . '/RegisteredUser.php';
 
 
 
 // $b = new Product('Sabbia Gatto', '22€', 34234242223515 , 35, 'Catsan', 'bla bla blaa bla bla', 'Cat' );
 $a = new Toy ('Sabbia Gatto', '22€', 34234242223515 , 35, 'Catsan', 'bla bla blaa bla bla', 'Cat' , 'sassi', '40cm', '5kg', '20cm');
 
-$cart = [];
+$myUser = new RegisteredUser( 'ciao@it', '123ciao', 'via col vento 1', 3498234237482, 23, array());
 
-function addItem($a){
-    return $cart[] = $a;
-};
+$myUser->addToCart($a);
 
-function getCart($cart){
-    
-   
-}
+// function addItem($a){
+//     return $cart[] = $a;
+// };
 
-addItem($a);
 
-var_dump(addItem($a));
 
-var_dump($cart);
+
+
+var_dump($myUser);
+
+
 ?>
  
 <!DOCTYPE html>
