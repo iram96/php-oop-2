@@ -9,7 +9,7 @@ include_once __DIR__ . '/RegisteredUser.php';
 // $b = new Product('Sabbia Gatto', '22€', 34234242223515 , 35, 'Catsan', 'bla bla blaa bla bla', 'Cat' );
 $a = new Toy ('Sabbia Gatto', '22€', 34234242223515 , 35, 'Catsan', 'bla bla blaa bla bla', 'Cat' , 'sassi', '40cm', '5kg', '20cm');
 
-$myUser = new RegisteredUser( 'ciao@it', '123ciao', 'via col vento 1', 3498234237482, 23, array());
+$myUser = new RegisteredUser( 'ciao@it', '123ciao', 'via col vento 1', 3498234237482, 23, array(), 'IT');
 
 $myUser->addToCart($a);
 

@@ -1,7 +1,11 @@
 <?php 
-
+require_once __DIR__ . '/Customer.php';
+require_once __DIR__ . '/Address.php';
 
 class RegisteredUser {
+use Customer;
+use Address;
+
     private $email;
     private $password;
     private $addresses;
@@ -9,7 +13,7 @@ class RegisteredUser {
     private $orderHistory;
     public $cart;
 
-    public function __construct(string $email, string $password, $addresses, $creditCard, $orderHistory, array $cart ) {
+    public function __construct(string $email, string $password, $addresses, $creditCard, $orderHistory, array $cart, string $country ) {
 
         $this->setEmail($email);
         $this->setPassword($password);
@@ -17,6 +21,7 @@ class RegisteredUser {
         $this->setCreditCard($creditCard);
         $this->setOrderHistory($orderHistory);
         $this->cart = $cart;
+        $this->setCountry($country);
         
        
         
@@ -55,6 +60,6 @@ class RegisteredUser {
     }
 
     public function addToCart($item){
-        return $cart[] = $item;
+        return $this->cart[] = $item;
     }
 }
