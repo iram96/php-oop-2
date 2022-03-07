@@ -8,17 +8,18 @@ include_once __DIR__ . '/Toy.php';
 // $b = new Product('Sabbia Gatto', '22€', 34234242223515 , 35, 'Catsan', 'bla bla blaa bla bla', 'Cat' );
 $a = new Toy ('Sabbia Gatto', '22€', 34234242223515 , 35, 'Catsan', 'bla bla blaa bla bla', 'Cat' , 'sassi', '40cm', '5kg', '20cm');
 
-$cart = ['ciao'];
+$cart = [];
 
-function addItem($selected){
-    $cart[] = $selected;
+function addItem($a){
+    return $cart[] = $a;
 };
 
 function getCart($cart){
     
-    var_dump($cart);
+   
 }
 
+addItem($a);
 
 var_dump(addItem($a));
 
